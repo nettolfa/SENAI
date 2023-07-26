@@ -5,20 +5,17 @@ Algoritmo "sem nome"
 // Autor(a)    : Nome do(a) aluno(a)
 // Data atual  : 26/07/2023
 Var
-// Seção de Declarações das variáveis 
+// Seção de Declarações das variáveis
 
 nota: real
 
 Inicio
-
-  repita
-      escreva("Digite a nota (entre 0 e 10): ")
+    escreva("Digite a nota (entre 0 e 10): ")
       leia(nota)
 
-      se (nota < 0) ou (nota > 10) entao
+  enquanto (nota < 0) ou (nota > 10) faca
          escreval("Nota inválida. Digite novamente.")
-      fimse
-   ate (nota < 0) ou (nota > 10)
-
-   escreval("A nota digitada é: ", nota)
+      escreva("Digite a nota (entre 0 e 10): ")
+      leia(nota)
+fimenquanto
 Fimalgoritmo

@@ -5,19 +5,19 @@ Algoritmo "sem nome"
 // Autor(a)    : Nome do(a) aluno(a)
 // Data atual  : 26/07/2023
 Var
-// Seção de Declarações das variáveis 
+// Seção de Declarações das variáveis
 
-genero: caractere
+sexo: caractere
 
 Inicio
 
- escreva("Digite a letra correspondente ao gênero (F ou M): ")
-   leia(genero)
+  escreva("Digite a letra correspondente ao sexo (F ou M): ")
+   leia(sexo)
 
-   se (genero = F) ou (genero = f) entao
+   se (sexo = "F") ou (sexo = "f") entao
       escreval("F - Feminino")
    senao
-      se (genero = M) ou (genero = m) entao
+      se (sexo = "M") ou ("sexo = m") entao
          escreval("M - Masculino")
       senao
          escreval("Sexo Inválido.")
