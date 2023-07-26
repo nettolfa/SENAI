@@ -7,21 +7,18 @@ Algoritmo "sem nome"
 Var
 // Seção de Declarações das variáveis 
 
-genero: caractere
+nota: real
 
 Inicio
 
- escreva("Digite a letra correspondente ao gênero (F ou M): ")
-   leia(genero)
+  repita
+      escreva("Digite a nota (entre 0 e 10): ")
+      leia(nota)
 
-   se (genero = F) ou (genero = f) entao
-      escreval("F - Feminino")
-   senao
-      se (genero = M) ou (genero = m) entao
-         escreval("M - Masculino")
-      senao
-         escreval("Sexo Inválido.")
+      se (nota < 0) ou (nota > 10) entao
+         escreval("Nota inválida. Digite novamente.")
       fimse
-   fimse
+   ate (nota < 0) ou (nota > 10)
 
+   escreval("A nota digitada é: ", nota)
 Fimalgoritmo
