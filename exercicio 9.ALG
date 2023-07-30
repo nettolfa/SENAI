@@ -1,43 +1,41 @@
 Algoritmo "sem nome"
-// Disciplina  :  [Linguagem e LÛgica de ProgramaÁ„o] 
+// Disciplina  :  [Linguagem e L√≥gica de Programa√ß√£o] 
 // Professor   : Antonio Carlos Nicolodi 
-// DescriÁ„o   : Aqui vocÍ descreve o que o programa faz! (funÁ„o)
+// Descri√ß√£o   : Aqui voc√™ descreve o que o programa faz! (fun√ß√£o)
 // Autor(a)    : Nome do(a) aluno(a)
 // Data atual  : 26/07/2023
 var
-   idade, estadoCivil: caractere
+   idade: inteiro
+   estadoCivil, sexo: caractere
    salario: real
-   sexo: caractere
 
 inicio
-   // Leitura das informaÁıes
-   escreva("Digite a idade (entre 0 e 150): ")
-   leia(idade)
+   // Valida√ß√£o da idade
+   repita
+      escreva("Digite a idade (entre 0 e 150): ")
+      leia(idade)
+   ate (idade >= 0) e (idade <= 150)
 
-   escreva("Digite o sal·rio (maior que zero): ")
+   escreva("Digite o sal√°rio (maior que zero): ")
    leia(salario)
 
    escreva("Digite o sexo ('f' para feminino, 'm' para masculino): ")
    leia(sexo)
 
-   escreva("Digite o estado civil ('s' para solteiro, 'c' para casado, 'v' para vi˙vo, 'd' para divorciado): ")
+   escreva("Digite o estado civil ('s' para solteiro, 'c' para casado, 'v' para vi√∫vo, 'd' para divorciado): ")
    leia(estadoCivil)
 
-   // ValidaÁ„o das informaÁıes
-   se (idade < 0) ou (idade > 150) entao
-      escreval("Idade inv·lida. Por favor, digite uma idade entre 0 e 150.")
+   // Valida√ß√£o das informa√ß√µes
+   se salario <= 0 entao
+      escreval("Sal√°rio inv√°lido. Por favor, digite um valor maior que zero.")
    senao
-      se salario <= 0 entao
-         escreval("Sal·rio inv·lido. Por favor, digite um valor maior que zero.")
+      se (sexo <> "f") e (sexo <> "m") entao
+         escreval("Sexo inv√°lido. Digite 'f' para feminino ou 'm' para masculino.")
       senao
-         se (sexo <> 'f') e (sexo <> 'm') entao
-            escreval("Sexo inv·lido. Digite 'f' para feminino ou 'm' para masculino.")
+         se (estadoCivil <> "s") e (estadoCivil <> "c") e (estadoCivil <> "v") e (estadoCivil <> "d") entao
+            escreval("Estado civil inv√°lido. Digite 's', 'c', 'v' ou 'd'.")
          senao
-            se (estadoCivil <> 's') e (estadoCivil <> 'c') e (estadoCivil <> 'v') e (estadoCivil <> 'd') entao
-               escreval("Estado civil inv·lido. Digite 's', 'c', 'v' ou 'd'.")
-            senao
-               escreval("Todas as informaÁıes foram validadas com sucesso!")
-            fimse
+            escreval("Todas as informa√ß√µes foram validadas com sucesso!")
          fimse
       fimse
    fimse
